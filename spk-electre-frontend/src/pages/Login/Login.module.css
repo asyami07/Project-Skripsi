@@ -1,0 +1,365 @@
+.loginPage {
+  min-height: 100vh;
+
+  background: #f5f5f5fb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+
+.loginCard {
+  width: 100%;
+  max-width: 520px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  padding: 45px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.05);
+
+  position: relative;
+  z-index: 10;
+
+  backdrop-filter: blur(10px);
+}
+
+/* ================= LOGO ================= */
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #222;
+
+  text-align: center;
+
+  margin-bottom: 8px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.logoImage {
+  width: 90px;
+  height: 90px;
+
+  object-fit: contain;
+
+  margin-bottom: 10px;
+}
+
+.logoTitle {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #f4a300;
+
+  position: relative;
+
+  text-align: center;
+
+  padding-bottom: 14px;
+
+  margin-bottom: 10px;
+}
+
+.logoTitle::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 260px;
+
+  height: 1.5px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(244, 163, 0, 0.95),
+    transparent
+  );
+
+  border-radius: 999px;
+}
+
+/* ================= TITLE ================= */
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+
+  margin-bottom: 8px;
+
+  color: #222;
+
+  text-align: center;
+}
+
+.subtitle {
+  color: #777;
+
+  margin-bottom: 24px;
+
+  text-align: center;
+
+  line-height: 1.5;
+}
+
+/* ================= ERROR ================= */
+
+.error {
+  background: #ffe5e5;
+
+  color: red;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+
+/* ================= FORM ================= */
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.formGroup input {
+  width: 100%;
+
+  padding: 16px;
+
+  font-size: 15px;
+
+  border: 1px solid #d6d6d6;
+
+  border-radius: 14px;
+
+  outline: none;
+
+  background: #f2f6ff;
+
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus {
+  border-color: orange;
+
+  background: white;
+
+  box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.12);
+}
+
+/* ================= PASSWORD ================= */
+
+.passwordWrapper {
+  position: relative;
+}
+
+.showPassword {
+  position: absolute;
+
+  right: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  color: orange;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  user-select: none;
+}
+
+/* ================= BUTTON ================= */
+
+.loginButton {
+  width: 100%;
+
+  margin-top: 14px;
+
+  background: #f4a300;
+  color: white;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+  background: #d88d00;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(244, 163, 0, 0.3);
+}
+
+.loginButton:active {
+  transform: scale(0.98);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .loginCard {
+    padding: 35px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .logoTitle {
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #f4a300;
+
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-bottom: 18px;
+  }
+  .logoTitle::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 430px;
+
+    height: 2px;
+
+    background: #f4a300;
+
+    border-radius: 999px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .loginPage {
+    padding: 15px;
+  }
+
+  .loginCard {
+    padding: 28px;
+    border-radius: 22px;
+  }
+
+  .logoImage {
+    width: 75px;
+    height: 75px;
+  }
+
+  .logoTitle {
+    font-size: 24px;
+  }
+
+  .logoTitle::after {
+    width: 170px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .formGroup input {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .loginButton {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+/* password */
+.showPassword {
+  position: absolute;
+
+  right: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  color: #f4a300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+.showPassword:hover {
+  color: #d88d00;
+
+  transform: translateY(-50%) scale(1.05);
+}

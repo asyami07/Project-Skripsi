@@ -1,0 +1,92 @@
+# GET http://localhost:3000/api/generate-lineup
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDM1NTMyLCJleHAiOjE3NzkxMjE5MzJ9.v7_wV3wVKR2Zk-tiGLufS902_5B4rKI1BkXTDCk4XuI
+
+# ===================================================
+# ###
+# GET http://localhost:3000/api/pemain
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MDM1NTMyLCJleHAiOjE3NzkxMjE5MzJ9.v7_wV3wVKR2Zk-tiGLufS902_5B4rKI1BkXTDCk4XuI
+
+# ###
+# POST http://localhost:3000/api/pemain
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc4NTA4NTUxLCJleHAiOjE3Nzg1OTQ5NTF9.zr0voGOTT7oU2N36ASVYxGS_MHK9X6ETsfmMq0Ya3mg
+
+# {
+#   "nama": "Riyan",
+#   "id_posisi": 8,
+#   "status": "fit"
+# }
+
+# ====================================================
+# ####
+# GET  http://localhost:3000/api/nilai
+
+# ###
+# POST http://localhost:3000/api/nilai
+# Content-Type: application/json
+
+# {
+#   "id_pemain": 22,
+#   "id_kriteria": 28,
+#   "nilai": 5
+# }
+
+# =====================================================
+# ###
+# GET http://localhost:3000/api/kriteria
+
+# ###
+# POST http://localhost:3000/api/kriteria
+# Content-Type: application/json
+
+# {
+#   "nama_kriteria": "IQ",
+#   "tipe": "benefit",
+#   "bobot": 3,
+#   "id_posisi": 7
+# }
+
+# =====================================================
+
+# ###
+# POST http://localhost:3000/api/register
+# Content-Type: application/json
+
+# {
+#   "username": "pelatih",
+#   "password": "12345",
+#   "role": "pelatih"
+# }
+
+# ###
+# POST http://localhost:3000/api/login
+# Content-Type: application/json
+
+# {
+#   "username": "admin",
+#   "password": "123456"
+# }
+
+# GET http://localhost:3000/api/posisi
+# Authorization: Bearer TOKEN
+
+###
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+# ###
+# GET http://localhost:3000/api/posisi
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5MjYwNTA1LCJleHAiOjE3NzkzNDY5MDV9.cvs5OW65LpLD8AWcxJv3K0CtVdRzRnWYh944xtoSxB0
+
+###
+GET http://localhost:3000/api/kriteria/posisi/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5ODY2NjExLCJleHAiOjE3Nzk5NTMwMTF9.4INlEVYGAF0ueOg4dSaIMnTBKvva-lIvzvfajp-Ksws
+
+###
+GET http://localhost:3000/api/formasi
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgwMTYxNjI3LCJleHAiOjE3ODAyNDgwMjd9.-LXaCf4rSgmImPEZR65dTob7J35zoJ9h8sL91FmU9Kg

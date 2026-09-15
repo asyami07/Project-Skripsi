@@ -1,0 +1,14 @@
+# Environment variables
+spk-electre-backend/.env
+spk-electre-frontend/.env
+spk-electre-frontend/.env.*
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
