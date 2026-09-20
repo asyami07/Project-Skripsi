@@ -9,7 +9,7 @@ export default (sequelize, DataTypes) => {
       },
 
       password: {
-        type: DataTypes.STRING(15),
+        type: DataTypes.STRING(),
         allowNull: false,
       },
 

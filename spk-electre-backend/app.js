@@ -51,21 +51,39 @@ app.use(
 );
 
 //  FUNGSI INIT DATABASE
+// const initDB = async () => {
+//   try {
+//     // Mengecek apakah koneksi ke database berhasil
+//     await sequelize.authenticate();
+//     console.log("Database connected ");
+
+//     // Sinkronisasi model ke database
+//     // ini yang membuat tabel otomatis di PostgreSQL
+//     await db.sequelize.sync({
+//       alter: true,
+//     });
+//     console.log("Database synced ");
+//   } catch (error) {
+//     // Jika ada error koneksi atau sync
+//     console.error("Error:", error);
+//   }
+// };
+
+// FUNGSI INIT DATABASE DEPLOYMENT
 const initDB = async () => {
   try {
-    // Mengecek apakah koneksi ke database berhasil
     await sequelize.authenticate();
-    console.log("Database connected ");
+    console.log("Database connected");
 
-    // Sinkronisasi model ke database
-    // ini yang membuat tabel otomatis di PostgreSQL
-    await db.sequelize.sync({
-      alter: true,
-    });
-    console.log("Database synced ");
+    // Hanya melakukan sinkronisasi saat development
+    if (process.env.NODE_ENV !== "production") {
+      await db.sequelize.sync({
+        alter: true,
+      });
+      console.log("Database synced");
+    }
   } catch (error) {
-    // Jika ada error koneksi atau sync
-    console.error("Error:", error);
+    console.log("Database connected error:", error);
   }
 };
 
